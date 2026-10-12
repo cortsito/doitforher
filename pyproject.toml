@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "do-it-for-her"
+version = "0.1.0"
+description = "A tiny always-on-top desktop widget that rotates through your own photos to keep you motivated."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "Pillow>=10.0",
+]
+
+[project.scripts]
+do-it-for-her = "doitforher.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
